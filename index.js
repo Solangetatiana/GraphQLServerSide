@@ -4,8 +4,6 @@ var cors = require('cors');
 app.use(cors());
 
 var axios = require('axios');
-const https = require('https');
-var { makeExecutableSchema } = require('graphql-tools');
 
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
@@ -20,8 +18,7 @@ var { buildSchema } = require('graphql');
     //       thumbnailUrl
     //     }
     //   }
-
-    // http://localhost:4002/graphql      
+ 
     //   {
     //     getPhotos {
     //       albumId
@@ -32,6 +29,45 @@ var { buildSchema } = require('graphql');
     //     }
     //   }
       
+    // mutation{					
+    //    updatePhotoMock(										
+    //       data: {
+    //         albumId: 5,
+    //         title: 'teste 5',
+    //         url: 'teste 5',
+    //         thumbnailUrl: null
+    //         },
+    //       where: {
+    //             id: 300
+    //             }				
+    //    )
+    //     {										
+    //       albumId
+    //       id
+    //       title
+    //       url
+    //       thumbnailUrl			
+    //     } 
+    //   } 
+
+    // mutation{
+    //   createPhotoMock(
+    //     data:	{
+    //       albumId: 3
+    //       title: "teste 3"
+    //       url: "teste 3"
+    //       thumbnailUrl: "teste 3"
+    //     }
+    //   )
+    //   {				
+    //     albumId
+    //     id
+    //     title
+    //     url
+    //     thumbnailUrl
+    //   } 
+    // }
+
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
