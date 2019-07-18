@@ -166,7 +166,7 @@ var root = {
    },     
     createPhotoMock: function (values) {
       const	newPhoto	=	values.data;				
-      newPhoto.id	=	300;
+      newPhoto.id	=	values.data.albumId;
       photosMock.push(newPhoto);		
       console.log(newPhoto);		
       return	newPhoto;
