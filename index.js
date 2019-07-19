@@ -111,6 +111,8 @@ var schema = buildSchema(`
     updatePhotoMock(data:	PhotoInput!, where:	PhotoWhere!):	Photo     
   } 
 
+
+
 `);
 
 // type	Mutation	{		
